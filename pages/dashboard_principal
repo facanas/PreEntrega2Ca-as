@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,14 +15,14 @@
         <img src="../img/iot.png" alt="tulogo" class="card__logo">
     </header>
 
-<!--Menu Navegación Lateral -->
+<!--Menu Navegación Lateral 
     <nav id="barraMenuLat">
 
         <div>
             <p class="parrafo "> Plataforma IoT Prototipo</p>
         </div>
 
-        <!--Usuario -->
+        <!--Usuario 
         <div>
             <img src="../img/usuario.png" alt="user" class="card__logo">
             <ul class="lista">
@@ -30,7 +31,7 @@
             </ul>
         </div>
 
-    <!--Menu General -->
+    <!--Menu General 
         <div class="barraMenuLat_gral">
             <ul>
                 <li> Dashboard
@@ -56,7 +57,7 @@
 
     </div>
 
-<!--Pie de Página-->
+<!--Pie de Página
     <footer>
 
         <div id="foot">
@@ -76,6 +77,197 @@
         </div>
     </footer>
 
+
+</body>
+
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>IoT Dashboard Prototype</title>
+</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+    <div class="grid-container">
+
+        <header class="bloqueSup">
+            <img href="../index.html" src="../img/iot.png" alt="tulogo" class="card__logo" >
+            <p> Plataforma IoT Prototipo</p>
+        </header>
+
+        <!--Menu Navegación Lateral -->
+<!--
+        <nav class="barraMenuLat">
+                <ul>
+                    <li> <img src="img/usuario.png" alt="user" class="card__logo_redes"> 
+                        <ol>Usuario</ol>
+                        <ol><a href="pages/iniciosesion.html"> Cerrar Sesión</a></ol>
+                    </li>
+                    
+                    <li> Dashboard
+                        <ol><a href="pages/dashboard_principal">Principal</a></ol>
+                        <ol>General</ol>
+                    </li>
+                    <li> Tabla de Datos</li>
+                    <li><a href="pages/informacion_gral">Información General</a></li>
+                </ul>
+        </nav>
+
+        -->
+        <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index.html"> Principal</a>
+            <a href="dashboard_principal">Dashboard</a>
+            <a href="informacion_gral">Info</a>
+            <a href="contacto.html">Contacto </a>
+        </div>
+
+
+        <main class="central_menu">
+            <section class="section-config1">
+                
+                <button type="button" class="collapsible">Lecturas Sensores</button>
+                <div class="content">
+                    <!--Lectura 1-->
+                    <div class="small-card">
+                        <h4 style="top: 0% ; left:0% ; position: absolute;"> Sensor 1</h4> 
+                        
+                        <div class="small-card-main-info">
+                            
+                            <h3 style="top: 40%; left: 0; position: absolute"> Temperatura: 5°C</h3> 
+    
+                        </div>
+                         
+                        <div class="small-card-second-info">
+                        <h5 style="text-align:center; top:25%; position: relative;"> MAX:2°C | MIN: -10°C</h5> 
+                        </div>
+                    </div>
+    
+                    <!--Lectura 2-->
+                    <div class="small-card">
+                        <h4 style="top: 0% ; left:0% ; position: absolute;"> Sensor 2</h4> 
+                        
+                        <div class="small-card-main-info">
+                            
+                            <h3 style="top: 40%; left: 0; position: absolute"> Temperatura: 5°C</h3> 
+    
+                        </div>
+                         
+                        <div class="small-card-second-info">
+                        <h5 style="text-align:center; top:25%; position: relative;"> MAX:10°C | MIN: 0°C</h5> 
+                        </div>
+                    </div>
+                    <!--Lectura 3-->
+                    <div class="small-card">
+                        <h4 style="top: 0% ; left:0% ; position: absolute;"> Sensor 3</h4> 
+                        
+                        <div class="small-card-main-info">
+                            
+                            <h3 style="top: 40%; left: 0; position: absolute"> Temperatura: 17°C</h3> 
+    
+                        </div>
+                         
+                        <div class="small-card-second-info">
+                        <h5 style="text-align:center; top:25%; position: relative;"> MAX:8°C | MIN: 20°C</h5> 
+                        </div>
+                    </div>
+    
+                    <!--Lectura 4-->
+                    <div class="small-card">
+                        <h4 style="top: 0% ; left:0% ; position: absolute;"> Sensor 4</h4> 
+                        
+                        <div class="small-card-main-info">
+                            
+                            <h3 style="top: 40%; left: 0; position: absolute"> Temperatura: 5°C</h3> 
+    
+                        </div>
+                         
+                        <div class="small-card-second-info">
+                        <h5 style="text-align:center; top:25%; position: relative;"> MAX:10°C | MIN: 0°C</h5> 
+                        </div>
+                    </div>
+                </div> 
+      
+                <button type="button" class="collapsible">Curvas</button>
+                <div class="content">
+                <!--Curvas-->
+                    <div class="big-card">
+                        <div class="smal-card-main-info">
+                            <div id="myPlot" style="width:100%;max-width:930px; height:100%; max-height:400px"></div>
+                                <script>
+                                var xArray = [50,60,70,80,90,100,110,120,130,140,150];
+                                var yArray = [7,8,8,9,9,9,10,10,10,8,7,7,6];
+
+                                // Define Data
+                                var data = [{
+                                x:xArray,
+                                y:yArray,
+                                mode:"line"
+                                }];
+
+                                // Define Layout
+                                var layout = {
+                                xaxis: {range: [40, 180], title: "TIEMPO"},
+                                yaxis: {range: [5, 12], title: "Temperatura"},  
+                                title: " Curvas Temperatura"
+                                };
+
+                                // Display using Plotly
+                                Plotly.newPlot("myPlot", data, layout);
+                                </script>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+    <!--Pie de Página-->
+        <footer class="foot">
+            <section>
+                    <a href="https://ar.linkedin.com/"> <img src="../img/logo_linkedin.png" alt="linkedin"class="card__logo_redes"> </a>
+                    <a href="https://www.facebook.com/"> <img src="../img/logo_fb.png " alt="fb" class="card__logo_redes"> </a>
+                    
+            </section>
+            
+        </footer>
+
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "150px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0px";
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+ 
 
 </body>
 

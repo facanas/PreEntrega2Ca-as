@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
     <header id="bloqueSup">
         <img src="../img/iot.png" alt="tulogo" class="card__logo">
     </header>
-    <!--Menu Navegación Lateral -->
+    <!--Menu Navegación Lateral 
 
     <nav id="barraMenuLat">
 
@@ -39,7 +40,7 @@
             <p class="parrafo "> Plataforma IoT Prototipo</p>
         </div>
 
-        <!--Usuario -->
+        <!--Usuario
         <div>
             <img src="../img/usuario.png" alt="user" class="card__logo">
             <ul class="lista">
@@ -48,7 +49,7 @@
             </ul>
         </div>
 
-        <!--Menu General -->
+        <!--Menu General
         <div class="barraMenuLat_gral">
             <ul>
                 <li> Dashboard
@@ -98,7 +99,7 @@
     </section>
 
 
-<!--Pie de Página-->
+<!--Pie de Página
     <footer>
         <div id="foot">
             <section>
@@ -119,3 +120,134 @@
 
 
 </body>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>IoT Dashboard Prototype</title>
+</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+    <div class="grid-container">
+
+        <header class="bloqueSup">
+            <img href="../index.html" src="../img/iot.png" alt="tulogo" class="card__logo" >
+            <p> Plataforma IoT Prototipo</p>
+        </header>
+
+        <!--Menu Navegación Lateral -->
+<!--
+        <nav class="barraMenuLat">
+                <ul>
+                    <li> <img src="img/usuario.png" alt="user" class="card__logo_redes"> 
+                        <ol>Usuario</ol>
+                        <ol><a href="pages/iniciosesion.html"> Cerrar Sesión</a></ol>
+                    </li>
+                    
+                    <li> Dashboard
+                        <ol><a href="pages/dashboard_principal">Principal</a></ol>
+                        <ol>General</ol>
+                    </li>
+                    <li> Tabla de Datos</li>
+                    <li><a href="pages/informacion_gral">Información General</a></li>
+                </ul>
+        </nav>
+
+        -->
+        <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index.html"> Usuario</a>
+            <a href="dashboard_principal">Dashboard</a>
+            <a href="informacion_gral">Info</a><
+            <a href="contacto.html">Contacto </a>
+        </div>
+
+
+        <main class="central_menu">
+            <section>
+
+                <table class="tabla">
+                    <tr>
+                        <th>Elemento/s</th>
+                        <th>Link</th>
+                        <th>Observaciones</th>
+                    </tr>
+                    <tr>
+                        <td>Imágenes .png</td>
+                        <td><a href="">https://www.flaticon.es</a></td>
+                        <td>Logos, imágenes de la pagina.</td>
+                    </tr>
+                    <tr>
+                        <td>Estructura</td>
+                        <td><a href="">https://lite.codedthemes.com/ablepro/index.html#!</a></td>
+                        <td>Idea de la estructura general</td>
+                    </tr>
+                    <tr>
+                        <td>Form Inicio Sesión</td>
+                        <td><a
+                                href="">https://preview.themeforest.net/item/lucid-angular-7-admin-template/full_screen_preview/23294743?_ga=2.51787818.2078087217.1666123013-721042022.1666123013</a>
+                        </td>
+                        <td>Idea de Estructura</td>
+                    </tr>
+                    <tr>
+                        <td>Colores</td>
+                        <td><a href="">https://coolors.co</a></td>
+                        <td>Gama de Colores</td>
+                    </tr>
+                </table>
+        
+        
+            </section>
+        </main>
+
+    <!--Pie de Página-->
+        <footer class="foot">
+            <section>
+                    <a href="https://ar.linkedin.com/"> <img src="../img/logo_linkedin.png" alt="linkedin"class="card__logo_redes"> </a>
+                    <a href="https://www.facebook.com/"> <img src="../img/logo_fb.png " alt="fb" class="card__logo_redes"> </a>
+                    
+            </section>
+            
+        </footer>
+
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "150px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0px";
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+ 
+
+</body>
+
+</html>

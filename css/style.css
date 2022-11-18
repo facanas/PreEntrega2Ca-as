@@ -42,7 +42,6 @@ ol {
   width: 4rem;
   padding-left: 2rem;
 }
-
 .card__logo_redes {
   width: 2rem;
   height: 2rem;
@@ -51,7 +50,6 @@ ol {
 .parrafo {
   text-align: center;
 }
-
 
 /*
 #barraMenuLat {
@@ -283,21 +281,20 @@ ol {
 
 .grid-container{
   width: 95%;
+  height: 100%;
   margin:0 auto;
   background-color: #d9dadf;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: grid;
   /* Columnas */ 
-  grid-template-columns: 0.4fr 1fr 1fr 1fr;
+  grid-template-columns: 100px auto;
   /* Filas */ 
-  grid-template-rows: 100px auto auto auto 100px;
+  grid-template-rows: 100px auto 100px;
   grid-template-areas: 
-  "nav header header header"
-  "nav main main main"
-  "nav main main main"
-  "nav main main main"
-  "nav footer footer footer"
+  "nav header"
+  "nav main"
+  "nav footer"
   ;
   row-gap: 10px;
   column-gap: 10px;
@@ -318,10 +315,9 @@ ol {
 .central_menu{
   background-color: #787878;
   grid-area: main;
-  display: flex;
-  flex-direction: column ;
+  height: 100%;
   justify-items: center;
-  align-content: left;
+  align-content: center;
   
 }
 
@@ -337,7 +333,7 @@ ol {
 
 .small-card{
   background-color: #859efc;
-  display: flex;
+  /*display: flex;*/
   border: none;
   border-radius: 0.1rem 0.1rem 0.1rem 0.1rem;
   width: 230px;
@@ -389,13 +385,13 @@ ol {
   grid-area: main;
   color: #727A89;
 }
-
+/*
 .section-config1{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-
-}
+  flex-wrap:wrap;
+ 
+}*/
 
 /* BARRA DE NAVEGACIÓN LATERAL*/
 
@@ -407,7 +403,7 @@ ol {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: grey;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -418,7 +414,7 @@ ol {
   padding: 8px 8px 8px 20px;
   text-decoration: none;
   font-size: 15px;
-  color: #818181;
+  color: #111;
   display: block;
   transition: 0.3s;
 }
@@ -441,4 +437,33 @@ ol {
 }
 
 /* FIN BARRA DE NAVEGACIÓN LATERAL*/
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: flex;
+  flex-direction: row;
+
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
 
