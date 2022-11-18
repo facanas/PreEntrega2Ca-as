@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>IoT Dashboard Prototype</title>
+</head>
+
+<body>
+    <header id="bloqueSup">
+        <img src="../img/iot.png" alt="tulogo" class="card__logo">
+    </header>
+
+<!--Menu Navegación Lateral -->
+    <nav id="barraMenuLat">
+
+        <div>
+            <p class="parrafo "> Plataforma IoT Prototipo</p>
+        </div>
+
+        <!--Usuario -->
+        <div>
+            <img src="../img/usuario.png" alt="user" class="card__logo">
+            <ul class="lista">
+                <li>Usuario</li>
+                <li><a href="../pages/iniciosesion.html"> Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
+    <!--Menu General -->
+        <div class="barraMenuLat_gral">
+            <ul>
+                <li> Dashboard
+                    <ol><a href="../pages/dashboard_principal">Principal</a></ol>
+                    <ol>General</ol>
+                </li>
+                <li> Tabla de Datos</li>
+                <li><a href="../pages/informacion_gral">Información General</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="central_dash">
+
+        <img src="../img/curva1.png" alt="curva1" class="curva">
+        <img src="../img/curva2.png" alt="curva2" class="curva">
+        <img src="../img/curva1.png" alt="curva1" class="curva">
+        <img src="../img/curva1.png" alt="curva1" class="curva">
+        <img src="../img/general.png" alt="general" class="general">
+
+
+
+    </div>
+
+<!--Pie de Página-->
+    <footer>
+
+        <div id="foot">
+            <section>
+                <a href="https://ar.linkedin.com/"> <img src="../img/logo_linkedin.png" alt="linkedin"
+                    class="card__logo_redes"> </a>
+                <a href="https://www.facebook.com/"> <img src="../img/logo_fb.png " alt="fb" class="card__logo_redes"> </a>
+            </section>
+
+            <section>
+                <a href="../pages/contacto.html">
+                    <span class="contacto">Contacto</span>
+                </a>
+            </section>
+            <p class="parrafo_Sup"> SITIO DISEÑADO POR FCANAS © Copyright</p>
+            <p class="parrafo_Sup"> DESARROLLO WEB CODERHOUSE 2022</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

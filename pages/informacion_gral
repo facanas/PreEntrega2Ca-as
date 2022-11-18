@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>IoT Dashboard Prototype</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 6rem;
+            margin-left: 10rem;
+
+        }
+
+        th,
+        td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header id="bloqueSup">
+        <img src="../img/iot.png" alt="tulogo" class="card__logo">
+    </header>
+    <!--Menu Navegación Lateral -->
+
+    <nav id="barraMenuLat">
+
+        <div>
+            <p class="parrafo "> Plataforma IoT Prototipo</p>
+        </div>
+
+        <!--Usuario -->
+        <div>
+            <img src="../img/usuario.png" alt="user" class="card__logo">
+            <ul class="lista">
+                <li>Usuario</li>
+                <li><a href="../pages/iniciosesion.html"> Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
+        <!--Menu General -->
+        <div class="barraMenuLat_gral">
+            <ul>
+                <li> Dashboard
+                    <ol><a href="../pages/dashboard_principal">Principal</a></ol>
+                    <ol>General</ol>
+                </li>
+                <li> Tabla de Datos</li>
+                <li><a href="../pages/informacion_gral">Información General</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <section class="central_dash">
+
+        <table class="tabla">
+            <tr>
+                <th>Elemento/s</th>
+                <th>Link</th>
+                <th>Observaciones</th>
+            </tr>
+            <tr>
+                <td>Imágenes .png</td>
+                <td><a href="">https://www.flaticon.es</a></td>
+                <td>Logos, imágenes de la pagina.</td>
+            </tr>
+            <tr>
+                <td>Estructura</td>
+                <td><a href="">https://lite.codedthemes.com/ablepro/index.html#!</a></td>
+                <td>Idea de la estructura general</td>
+            </tr>
+            <tr>
+                <td>Form Inicio Sesión</td>
+                <td><a
+                        href="">https://preview.themeforest.net/item/lucid-angular-7-admin-template/full_screen_preview/23294743?_ga=2.51787818.2078087217.1666123013-721042022.1666123013</a>
+                </td>
+                <td>Idea de Estructura</td>
+            </tr>
+            <tr>
+                <td>Colores</td>
+                <td><a href="">https://coolors.co</a></td>
+                <td>Gama de Colores</td>
+            </tr>
+        </table>
+
+
+    </section>
+
+
+<!--Pie de Página-->
+    <footer>
+        <div id="foot">
+            <section>
+                <a href="https://ar.linkedin.com/"> <img src="../img/logo_linkedin.png" alt="linkedin"
+                    class="card__logo_redes"> </a>
+                <a href="https://www.facebook.com/"> <img src="../img/logo_fb.png " alt="fb" class="card__logo_redes"> </a>
+            </section>
+
+            <section>
+                <a href="../pages/contacto.html">
+                    <span class="contacto">Contacto</span>
+                </a>
+            </section>
+            <p class="parrafo_Sup"> SITIO DISEÑADO POR FCANAS © Copyright</p>
+            <p class="parrafo_Sup"> DESARROLLO WEB CODERHOUSE 2022</p>
+        </div>
+    </footer>
+
+
+</body>
